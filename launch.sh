@@ -20,12 +20,10 @@ CATALINA_OPTS="$CATALINA_OPTS -XX:GCTimeRatio=9"
 CATALINA_OPTS="$CATALINA_OPTS -server"
 CATALINA_OPTS="$CATALINA_OPTS -XX:+DisableExplicitGC"
 
-APP_PORT=${PORT} || 5000
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 JAR_FILE=jarfile
 
 java -Djava.security.egd=file:/dev/./urandom \
 $CATALINA_OPTS -jar $DIR/$JAR_FILE \
---server.port=$APP_PORT --server.tomcat.uri-encoding=UTF-8
+--server.port=5000 --server.tomcat.uri-encoding=UTF-8
