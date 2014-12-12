@@ -24,7 +24,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 JAR_FILE="replace me"
 
+LISTEN_PORT=${PORT:-5000}
+
 # http://docs.oracle.com/middleware/1213/wls/WLSRN/issues.htm#BCFFDBEB
 java -Djava.security.egd=file:/dev/./urandom \
 $CATALINA_OPTS -jar $DIR/$JAR_FILE \
---server.port=5000 --server.tomcat.uri-encoding=UTF-8
+--server.port=$LISTEN_PORT --server.tomcat.uri-encoding=UTF-8
