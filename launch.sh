@@ -22,7 +22,7 @@ CATALINA_OPTS="$CATALINA_OPTS -XX:+DisableExplicitGC"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-JAR_FILE=jarfile
+JAR_FILE="replace me"
 
 java -Djava.security.egd=file:/dev/./urandom \
 $CATALINA_OPTS -jar $DIR/$JAR_FILE \
