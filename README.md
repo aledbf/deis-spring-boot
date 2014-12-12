@@ -1,4 +1,4 @@
-deis-spring-boot-java
+deis-spring-boot
 ================
 
 Template to deploy a Spring Boot application (jar) in deis
@@ -6,7 +6,6 @@ Template to deploy a Spring Boot application (jar) in deis
 **This template allows:**
 - Use a spring boot far file
 - Change the default JVM settings
-- Use the [heroku java buildpack](https://github.com/heroku/heroku-buildpack-java)
 - Use a [Procfile](https://devcenter.heroku.com/articles/procfile)
 
 **Steps:**
