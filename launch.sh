@@ -7,15 +7,9 @@
 #/_/  \____/_/ /_/ /_/\___/\__,_/\__/
 
 CATALINA_OPTS="-Xms256m -Xmx2G"
-CATALINA_OPTS="$CATALINA_OPTS"
-CATALINA_OPTS="$CATALINA_OPTS -XX:ThreadPriorityPolicy=42 -XX:ParallelGCThreads=4 -XX:+UseParNewGC"
-CATALINA_OPTS="$CATALINA_OPTS -XX:MaxGCPauseMillis=50 -XX:+UseStringCache -XX:+OptimizeStringConcat"
-
-# A hint to the virtual machine that it.s desirable that not more than:
-# 1 / (1 + GCTimeRation) of the application execution time be spent in
-# the garbage collector.
-# http://themindstorms.wordpress.com/2009/01/21/advanced-jvm-tuning-for-low-pause/
-CATALINA_OPTS="$CATALINA_OPTS -XX:GCTimeRatio=9"
+CATALINA_OPTS="$CATALINA_OPTS -Xss256k"
+CATALINA_OPTS="$CATALINA_OPTS -XX:ThreadPriorityPolicy=42"
+CATALINA_OPTS="$CATALINA_OPTS -XX:MaxGCPauseMillis=150"
 
 CATALINA_OPTS="$CATALINA_OPTS -server"
 CATALINA_OPTS="$CATALINA_OPTS -XX:+DisableExplicitGC"
